@@ -1,5 +1,5 @@
 import css from "./App.module.css";
-import SearchBar from "../SearchBar/SerchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import ImageModal from "../ImageModal/ImageModal";
 import Loader from "../Loader/Loader";
