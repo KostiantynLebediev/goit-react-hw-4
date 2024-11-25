@@ -36,6 +36,7 @@ export default function App() {
     } catch (error) {
       setError(true);
       setErrorMessage(error.message);
+      return [];
     }
   }
 
@@ -47,7 +48,7 @@ export default function App() {
       setQuery(newQuery);
       setPage(1);
       const data = await fetchImagesWithQuery(newQuery, 1, perPage);
-      if (data.length === 0) {
+      if (!data || data.length === 0) {
         setError(true);
         toast.error("No images found", { position: "top-right" });
       } else {
